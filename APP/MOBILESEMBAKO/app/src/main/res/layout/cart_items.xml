@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:layout_editor_absoluteY="60dp" />
+
+                <ImageButton
+                    app:layout_constraintLeft_toRightOf="@id/checkbox_cart"
+                    android:id="@+id/img_btn_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/img_btn_cart"
+                    android:id="@+id/nama_produk_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Chitato LITE"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/img_btn_cart"
+                    app:layout_constraintTop_toBottomOf="@id/nama_produk_cart"
+                    android:id="@+id/harga_produk_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Rp. 9.000"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/img_btn_cart"
+                    app:layout_constraintTop_toBottomOf="@id/harga_produk_cart"
+                    android:id="@+id/txt_stok_produk_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Stok"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/txt_stok_produk_cart"
+                    app:layout_constraintTop_toBottomOf="@id/harga_produk_cart"
+                    android:id="@+id/stok_produk_cart"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Stok"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/img_btn_cart"
+                    app:layout_constraintTop_toBottomOf="@id/stok_produk_cart"
+                    android:id="@+id/txt_total_produk_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Total : "
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/txt_total_produk_cart"
+                    app:layout_constraintTop_toBottomOf="@id/stok_produk_cart"
+                    android:id="@+id/otal_produk_cart"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Rp. 0"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plusminus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/yelow"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="7dp"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stok_produk_cart"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/kurang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintLeft_toRightOf="parent" />
+
+                        <TextView
+                            android:id="@+id/jumlah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            app:layout_constraintLeft_toRightOf="@+id/kurang" />
+
+                        <TextView
+                            android:id="@+id/tambah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="10dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintLeft_toRightOf="@+id/jumlah" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
